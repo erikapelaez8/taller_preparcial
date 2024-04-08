@@ -22,9 +22,9 @@ class MotoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'marca' => 'required|string',
-            'modelo' => 'required|string',
-            'cilindraje' => 'required|integer',
+            'marca' => 'required|string|max:255',
+            'modelo' => 'required|string|max:255',
+            'cilindraje' => 'required|integer|min:1',
             'ano' => 'required|date',
             'descripcion' => 'required|string',
             'precio' => 'required|numeric',
